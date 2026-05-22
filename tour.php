@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'BookMyGaddi — Taxi Services';
-$activeNav = 'taxi';
+$activeNav = 'tour';
 $pageScript = 'assets/js/taxi.js';
 require_once __DIR__ . '/includes/head.php';
 require_once __DIR__ . '/includes/header.php';

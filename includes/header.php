@@ -13,8 +13,8 @@ $navActiveStyle = ' style="color:var(--gold)"';
   </a>
 
   <nav>
-    <a href="taxi.php"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
-    <a href="index.php#packages"<?= $activeNav === 'tours' ? $navActiveStyle : '' ?>>Tour Packages</a>
+    <a href="index.php"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
+    <a href="tour.php"<?= $activeNav === 'tour' ? $navActiveStyle : '' ?>>Tour Packages</a>
     <a href="#">Experiences</a>
     <a href="#">About</a>
     <a href="#">Blog</a>
