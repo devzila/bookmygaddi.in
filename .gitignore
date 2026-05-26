@@ -2,4 +2,4 @@
 .env
 access_log
 error_log
-
+.DS_Store

@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'BookMyGaddi — Explore. Wander. Discover.';
-$activeNav = 'tour';
+$activeNav = 'truck';
 $pageScript = 'assets/js/index.js';
 
 require_once __DIR__ . '/includes/config.php';
@@ -11,7 +11,7 @@ try {
         'SELECT badge, image_url, tags, title, duration, vehicle_type, distance_in_km, price, rating, data_categories
          FROM packages 
          WHERE active = 1 
-         and type = "tour"
+         and type = "truck"
          ORDER BY id ASC'
     );
     $contentItems = $stmt->fetchAll();

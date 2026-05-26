@@ -15,9 +15,10 @@ $navActiveStyle = ' style="color:var(--gold)"';
   <nav>
     <a href="index.php"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
     <a href="tour.php"<?= $activeNav === 'tour' ? $navActiveStyle : '' ?>>Tour Packages</a>
-    <a href="#">Experiences</a>
+    <a href="bus.php"<?= $activeNav === 'bus' ? $navActiveStyle : '' ?>>Bus Services</a>
+    <a href="truck.php"<?= $activeNav === 'truck' ? $navActiveStyle : '' ?>>Truck Services</a>
     <a href="#">About</a>
-    <a href="#">Blog</a>
+
   </nav>
 
   <a class="btn-primary" href="#packages">Book Now</a>

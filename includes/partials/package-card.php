@@ -15,6 +15,7 @@ if (str_contains($badgeLower, 'new')) {
 }
 
 $tags = trim((string) ($item['tags'] ?? ''));
+$dataCategories = trim((string) ($item['data_categories'] ?? ''));
 $title = (string) ($item['title'] ?? '');
 $imageUrl = (string) ($item['image_url'] ?? '');
 $duration = trim((string) ($item['duration'] ?? ''));
@@ -29,7 +30,7 @@ $distanceLabel = $distanceKm !== '' && $distanceKm !== null
     ? (is_numeric($distanceKm) ? number_format((float) $distanceKm, 0) . ' km' : (string) $distanceKm)
     : '';
 ?>
-    <article class="package-card" data-cat="<?= htmlspecialchars($tags, ENT_QUOTES, 'UTF-8') ?>">
+    <article class="package-card" data-cat="<?= htmlspecialchars($dataCategories, ENT_QUOTES, 'UTF-8') ?>">
       <div class="card-image">
         <img src="<?= htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?>">
         <?php if ($badgeText !== ''): ?>
