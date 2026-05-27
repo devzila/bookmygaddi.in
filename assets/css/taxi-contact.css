@@ -5,11 +5,127 @@
 
 .taxi-contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr; /* contact column ~10% narrower than equal split */
   gap: 48px;
   max-width: 1100px;
   margin: 0 auto;
   align-items: start;
+}
+
+.taxi-package-hero-wrap {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.taxi-package-hero {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.taxi-package-hero-wrap .taxi-package-badge-overlay {
+  position: absolute;
+  top: auto;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2;
+}
+
+.taxi-package-rating-overlay {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  left: auto;
+  z-index: 2;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  background: rgba(13, 27, 42, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  max-width: min(55%, calc(100% - 100px));
+  line-height: 1.3;
+}
+
+.taxi-package-rating-overlay svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--gold);
+  fill: var(--gold);
+  flex-shrink: 0;
+}
+
+.taxi-package-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--deep);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+
+.taxi-package-tags {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.taxi-package-content {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid rgba(201, 169, 110, 0.25);
+}
+
+.taxi-package-content-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--deep);
+  margin-bottom: 12px;
+}
+
+.taxi-package-content-body {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.taxi-package-content-body p {
+  margin-bottom: 12px;
+}
+
+.taxi-package-content-body p:last-child {
+  margin-bottom: 0;
+}
+
+.taxi-package-content-body ul,
+.taxi-package-content-body ol {
+  margin: 0 0 12px 1.2em;
+}
+
+.taxi-package-content-body h2,
+.taxi-package-content-body h3,
+.taxi-package-content-body h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--deep);
+  margin: 16px 0 8px;
+  line-height: 1.3;
 }
 
 .taxi-contact-info h1 {
@@ -54,6 +170,77 @@
   height: 20px;
   stroke: var(--gold-dark);
   margin-top: 2px;
+}
+
+.taxi-package-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.taxi-stat {
+  flex: 1 1 calc(50% - 6px);
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 14px 12px;
+  background: var(--white);
+  border-radius: 10px;
+  border: 1px solid rgba(201, 169, 110, 0.25);
+}
+
+.taxi-stat svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--gold-dark);
+}
+
+.taxi-stat-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.taxi-stat-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--deep);
+  line-height: 1.35;
+}
+
+.taxi-stat-price .taxi-stat-value {
+  color: var(--gold-dark);
+  font-size: 15px;
+}
+
+.taxi-package-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.taxi-package-rating svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  fill: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .taxi-stat {
+    flex: 1 1 0;
+    min-width: 0;
+  }
 }
 
 .taxi-contact-card {
