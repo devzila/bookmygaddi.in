@@ -8,7 +8,7 @@ require_once __DIR__ . '/includes/config.php';
 $contentItems = [];
 try {
     $stmt = db()->query(
-        'SELECT badge, image_url, tags, title, duration, vehicle_type, distance_in_km, price, rating, data_categories
+        'SELECT id, badge, image_url, tags, title, slug, duration, vehicle_type, distance_in_km, price, rating, data_categories
          FROM packages 
          WHERE active = 1 
          and type = "taxi"

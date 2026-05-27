@@ -92,7 +92,7 @@ $distanceLabel = $distanceKm !== '' && $distanceKm !== null
             </div>
             <?php endif; ?>
           </div>
-          <button class="card-book-btn">Book Now</button>
+          <a href="<?=$activeNav?>/<?= $item['slug'] ?>" class="card-book-btn">Book Now</a>
         </div>
       </div>
     </article>
