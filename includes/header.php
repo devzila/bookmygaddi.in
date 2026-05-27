@@ -23,7 +23,7 @@ $navActiveStyle = ' style="color:var(--gold)"';
 
   <nav id="site-nav" class="site-nav" aria-label="Main navigation">
     <a class="mobile-nav-brand" href="/index.php">BookMy<span>Gaddi</span>.in</a>
-    <a href="/taxi/"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
+    <a href="/index.php"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
     <a href="/tour.php"<?= $activeNav === 'tour' ? $navActiveStyle : '' ?>>Tour Packages</a>
     <a href="/bus.php"<?= $activeNav === 'bus' ? $navActiveStyle : '' ?>>Bus Services</a>
     <a href="/truck.php"<?= $activeNav === 'truck' ? $navActiveStyle : '' ?>>Truck Services</a>
