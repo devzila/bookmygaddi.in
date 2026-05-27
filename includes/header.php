@@ -2,7 +2,16 @@
 $navActiveStyle = ' style="color:var(--gold)"';
 ?>
 <!-- ── HEADER ── -->
-<header>
+<header class="site-header">
+  <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+    <span class="nav-toggle-icon" aria-hidden="true">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </span>
+    <span class="nav-toggle-label">Menu</span>
+  </button>
+
   <a class="logo" href="/index.php">
     <div class="logo-icon">
       <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -12,16 +21,19 @@ $navActiveStyle = ' style="color:var(--gold)"';
     <div class="logo-text">BookMy<span>Gaddi</span>.in</div>
   </a>
 
-  <nav>
-    <a href="/index.php"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <a class="mobile-nav-brand" href="/index.php">BookMy<span>Gaddi</span>.in</a>
+    <a href="/taxi/"<?= $activeNav === 'taxi' ? $navActiveStyle : '' ?>>Taxi Services</a>
     <a href="/tour.php"<?= $activeNav === 'tour' ? $navActiveStyle : '' ?>>Tour Packages</a>
     <a href="/bus.php"<?= $activeNav === 'bus' ? $navActiveStyle : '' ?>>Bus Services</a>
     <a href="/truck.php"<?= $activeNav === 'truck' ? $navActiveStyle : '' ?>>Truck Services</a>
     <a href="#">About</a>
-
+    <a class="btn-primary btn-call btn-call-in-menu" href="tel:9915235434">Call Us: 9915235434</a>
   </nav>
 
-  <a class="btn-primary btn-call" href="tel:9915235434" aria-label="Call us at 9915235434">
-   <strong> Call Us: 9915235434</strong>
+  <a class="btn-primary btn-call btn-call-header" href="tel:9915235434" aria-label="Call us at 9915235434">
+    <strong>Call Us: 9915235434</strong>
   </a>
+
+  <div class="nav-overlay" aria-hidden="true"></div>
 </header>
