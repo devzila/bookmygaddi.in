@@ -21,5 +21,7 @@ $navActiveStyle = ' style="color:var(--gold)"';
 
   </nav>
 
-  <a class="btn-primary" href="#packages">Book Now</a>
+  <a class="btn-primary btn-call" href="tel:9915235434" aria-label="Call us at 9915235434">
+   <strong> Call Us: 9915235434</strong>
+  </a>
 </header>

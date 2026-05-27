@@ -122,6 +122,21 @@
     letter-spacing: 0.3px;
   }
 
+  /* Header call-to-action: phone icon + number aligned nicely */
+  .btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .btn-call svg {
+    display: block; /* prevents baseline misalignment */
+    width: 18px;
+    height: 18px;
+  }
+
   .btn-primary:hover {
     background: var(--gold-light);
     transform: translateY(-1px);
