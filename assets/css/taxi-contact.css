@@ -177,6 +177,7 @@
   line-height: 1.6;
 }
 
+.contact-us-form-wrap.hidden,
 .taxi-form-wrap.hidden {
   display: none;
 }
