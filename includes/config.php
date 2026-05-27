@@ -31,3 +31,4 @@ require_once __DIR__ . '/database.php';
 $pageTitle = $pageTitle ?? 'BookMyGaddi';
 $activeNav = $activeNav ?? ''; // 'tours' | 'taxi'
 $pageScript = $pageScript ?? null;
+$pageStylesheet = $pageStylesheet ?? null;
