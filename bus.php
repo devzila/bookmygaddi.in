@@ -2,6 +2,7 @@
 $pageTitle = 'BookMyGaddi — Explore. Wander. Discover.';
 $activeNav = 'bus';
 $pageScript = 'assets/js/index.js';
+$pageStylesheet = 'assets/css/bus.css';
 
 require_once __DIR__ . '/includes/config.php';
 
@@ -22,33 +23,17 @@ try {
 require_once __DIR__ . '/includes/head.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
-<!-- ── HERO BANNER ── -->
+<!-- ══════════════════ HERO ══════════════════ -->
 <section class="hero">
   <div class="hero-bg"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">Reliable Rides Across India</div>
-    <h1>Your Ride,<br>Your <em>Way</em></h1>
-    <p>Airport transfers, city day hires, and outstation trips — verified drivers, transparent pricing, and comfortable vehicles for every journey.</p>
-    <div class="hero-cta">
-      <a class="btn-primary" href="#packages" style="padding: 13px 28px; font-size: 15px;">View Taxi Packages</a>
-      <a class="btn-outline" href="index.html">Tour Packages</a>
-    </div>
-  </div>
+    <div class="hero-eyebrow">Premium Bus Services Across India</div>
 
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-num">50+</div>
-      <div class="stat-label">Cities Covered</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">15K+</div>
-      <div class="stat-label">Rides Completed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">4.8★</div>
-      <div class="stat-label">Driver Rating</div>
-    </div>
+    <h1>Journey Together,<br>Arrive in <em>Grandeur</em></h1>
+
+    <p>From interstate highways to school gates, corporate campuses to sacred shrines — our fleet of premium buses moves every kind of journey with comfort, punctuality, and dignity.</p>
+
   </div>
 
   <div class="scroll-hint">
@@ -60,39 +45,48 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 
-<!-- ── SEARCH BAR ── -->
+<!-- ══════════════════ SEARCH BAR ══════════════════ -->
 <div class="search-section">
   <div class="search-bar">
     <div class="search-field">
       <label>Destination</label>
       <select>
-        <option>All Destinations</option>
-        <option>Himachal Pradesh</option>
-        <option>Goa</option>
-        <option>Kerala</option>
-        <option>Rajasthan</option>
-        <option>Uttarakhand</option>
-        <option>Andaman</option>
+        <option>Select Destination</option>
+        <option>Delhi NCR</option>
+        <option>Chandigarh</option>
+        <option>Amritsar</option>
+        <option>Shimla</option>
+        <option>Haridwar</option>
+        <option>Varanasi</option>
+        <option>Mathura &amp; Vrindavan</option>
+        <option>Tirupati</option>
+        <option>Shirdi</option>
+        <option>Mumbai</option>
       </select>
     </div>
     <div class="search-field">
-      <label>Duration</label>
+      <label>Duration / Trip Type</label>
       <select>
-        <option>Any Duration</option>
-        <option>1–3 Days</option>
-        <option>4–6 Days</option>
-        <option>7–10 Days</option>
-        <option>10+ Days</option>
+        <option>Any Trip Type</option>
+        <option>One Way</option>
+        <option>Round Trip</option>
+        <option>Daily School Run</option>
+        <option>Corporate Monthly</option>
+        <option>2–3 Days Pilgrimage</option>
+        <option>Weekly Charter</option>
+        <option>Multi-Day Tour</option>
       </select>
     </div>
     <div class="search-field">
-      <label>Budget (per person)</label>
+      <label>Vehicle Type</label>
       <select>
-        <option>Any Budget</option>
-        <option>Under ₹10,000</option>
-        <option>₹10,000 – ₹25,000</option>
-        <option>₹25,000 – ₹50,000</option>
-        <option>₹50,000+</option>
+        <option>Any Bus Type</option>
+        <option>🚐 Mini Bus (15–20 Seats)</option>
+        <option>🚌 Standard Bus (32 Seats)</option>
+        <option>🚌 Large Bus (45 Seats)</option>
+        <option>💎 Luxury Volvo Coach</option>
+        <option>🏫 School Bus</option>
+        <option>🏢 AC Shuttle (14–20 Seats)</option>
       </select>
     </div>
     <button class="search-btn">
@@ -108,18 +102,18 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ── PACKAGES SECTION ── -->
 <section id="packages">
   <div class="section-header">
-    <p class="section-eyebrow">Handpicked For You</p>
-    <h2 class="section-title">Our <em>Signature</em> Packages</h2>
-    <p class="section-sub">Every package is thoughtfully curated for comfort, adventure, and memories worth sharing.</p>
+    <p class="section-eyebrow">Curated Bus Packages</p>
+    <h2 class="section-title">Find Your <em>Perfect</em> Bus</h2>
+    <p class="section-sub">Verified operators, GPS-tracked fleets, and transparent pricing on every booking.</p>
   </div>
 
   <div class="filter-tabs">
     <button class="filter-tab active" onclick="filterCards('all', this)">All</button>
-    <button class="filter-tab" onclick="filterCards('mountains', this)">Mountains</button>
-    <button class="filter-tab" onclick="filterCards('beaches', this)">Beaches</button>
-    <button class="filter-tab" onclick="filterCards('heritage', this)">Heritage</button>
-    <button class="filter-tab" onclick="filterCards('wildlife', this)">Wildlife</button>
-    <button class="filter-tab" onclick="filterCards('honeymoon', this)">Honeymoon</button>
+    <button class="filter-tab" onclick="filterCards('outstation', this)">Outstation</button>
+    <button class="filter-tab" onclick="filterCards('school', this)">School &amp; College</button>
+    <button class="filter-tab" onclick="filterCards('corporate', this)">Corporate</button>
+    <button class="filter-tab" onclick="filterCards('pilgrimage', this)">Pilgrimage</button>
+    <button class="filter-tab" onclick="filterCards('luxury', this)">Luxury Coach</button>
   </div>
 
   <div class="packages-grid" id="packagesGrid">
@@ -130,60 +124,110 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 
-<!-- ── WHY US ── -->
-<section class="why-us">
+<!-- ══════════════════ HOW IT WORKS ══════════════════ -->
+<section class="how-it-works">
   <div class="section-header">
-    <p class="section-eyebrow">Why Choose Us</p>
-    <h2 class="section-title" style="color:var(--white)">Travel <em>Smarter</em> With Us</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.45)">We take care of every detail so you can focus on creating memories.</p>
+    <p class="section-eyebrow">Simple As 1-2-3-4</p>
+    <h2 class="section-title" style="color:var(--white)">How It <em>Works</em></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.45)">Your bus, booked and confirmed in minutes.</p>
   </div>
-
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="step-num-badge">1</span>
       </div>
-      <div class="feature-title">Fully Insured</div>
-      <div class="feature-desc">All packages come with comprehensive travel insurance for your complete peace of mind.</div>
+      <div class="step-title">Select Package</div>
+      <div class="step-desc">Choose your route, bus type, and number of passengers from our curated catalogue.</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/><path d="M5.64 5.64A16 16 0 0 0 4 9"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        <span class="step-num-badge">2</span>
       </div>
-      <div class="feature-title">Handpicked Stays</div>
-      <div class="feature-desc">Every hotel, resort and camp is personally vetted by our travel experts.</div>
+      <div class="step-title">Share Requirements</div>
+      <div class="step-desc">Tell us pickup point, date, stops, and any special needs. We'll build your itinerary.</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <span class="step-num-badge">3</span>
       </div>
-      <div class="feature-title">24/7 Support</div>
-      <div class="feature-desc">Our travel concierge is available around the clock wherever you are in the world.</div>
+      <div class="step-title">Confirm &amp; Pay</div>
+      <div class="step-desc">Pay securely via UPI, NEFT, or card. Instant confirmation and GST invoice on WhatsApp.</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="14" rx="2"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><circle cx="7" cy="20" r="2"/><circle cx="17" cy="20" r="2"/></svg>
+        <span class="step-num-badge">4</span>
       </div>
-      <div class="feature-title">Flexible Booking</div>
-      <div class="feature-desc">Free cancellation up to 48 hours before departure. No questions asked.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      </div>
-      <div class="feature-title">Best Price Guarantee</div>
-      <div class="feature-desc">Find it cheaper elsewhere? We'll match the price and give you extra cashback.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="feature-title">Expert Local Guides</div>
-      <div class="feature-desc">Passionate local experts who know every hidden gem, story, and shortcut.</div>
+      <div class="step-title">Board &amp; Relax</div>
+      <div class="step-desc">Driver and bus details sent 24 hrs prior. Track live, relax, and arrive together.</div>
     </div>
   </div>
 </section>
 
+
+<!-- ══════════════════ FLEET OVERVIEW ══════════════════ -->
+<section class="fleet-showcase">
+  <div class="section-header">
+    <p class="section-eyebrow">Our Fleet</p>
+    <h2 class="section-title">Every Bus for <em>Every Group</em></h2>
+    <p class="section-sub">All buses are less than 4 years old, fully serviced, GPS-equipped, and fitness-certificate verified.</p>
+  </div>
+  <div class="fleet-grid">
+    <div class="fleet-card">
+      <span class="fleet-icon">🚐</span>
+      <div class="fleet-name">Mini Bus</div>
+      <div class="fleet-eg">Force Traveller, Winger</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">15</span><span class="spec-label">Seats</span></div>
+        <div class="fleet-spec"><span class="spec-val">AC</span><span class="spec-label">Type</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">🚌</span>
+      <div class="fleet-name">Standard Bus</div>
+      <div class="fleet-eg">Tata Starbus, Eicher</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">32</span><span class="spec-label">Seats</span></div>
+        <div class="fleet-spec"><span class="spec-val">AC</span><span class="spec-label">Type</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">🚌</span>
+      <div class="fleet-name">Large Bus</div>
+      <div class="fleet-eg">Ashok Leyland, Tata LP</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">45</span><span class="spec-label">Seats</span></div>
+        <div class="fleet-spec"><span class="spec-val">AC</span><span class="spec-label">Type</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">🏫</span>
+      <div class="fleet-name">School Bus</div>
+      <div class="fleet-eg">Tata Starbus School</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">28</span><span class="spec-label">Seats</span></div>
+        <div class="fleet-spec"><span class="spec-val">CCTV</span><span class="spec-label">Safety</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">💎</span>
+      <div class="fleet-name">Volvo Luxury</div>
+      <div class="fleet-eg">Volvo B9R, B11R</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">45</span><span class="spec-label">Seats</span></div>
+        <div class="fleet-spec"><span class="spec-val">Wi-Fi</span><span class="spec-label">Amenity</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── TESTIMONIALS ── -->
 <section class="testimonials">
