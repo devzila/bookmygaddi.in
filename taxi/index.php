@@ -92,13 +92,12 @@ require_once __DIR__ . '/../includes/header.php';
           <?= htmlspecialchars($package['rating'], ENT_QUOTES, 'UTF-8') ?>
         </p>
         <?php endif; ?>
-        <h1><?= htmlspecialchars($package['title'], ENT_QUOTES, 'UTF-8') ?></h1>
+        <h2><?= htmlspecialchars($package['title'], ENT_QUOTES, 'UTF-8') ?></h1>
         <?php if (!empty($package['tags'])): ?>
         <p class="taxi-package-tags"><?= htmlspecialchars($package['tags'], ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
         <?php if (!empty($packageContentHtml)): ?>
         <div class="taxi-package-content">
-          <h2 class="taxi-package-content-title">Package Details</h2>
           <div class="taxi-package-content-body"><?= $packageContentHtml ?></div>
         </div>
         <?php endif; ?>
