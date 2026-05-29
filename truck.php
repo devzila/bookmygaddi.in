@@ -2,6 +2,7 @@
 $pageTitle = 'BookMyGaddi — Explore. Wander. Discover.';
 $activeNav = 'truck';
 $pageScript = 'assets/js/index.js';
+$pageStylesheet = '/assets/css/truck.css';
 
 require_once __DIR__ . '/includes/config.php';
 
@@ -22,32 +23,41 @@ try {
 require_once __DIR__ . '/includes/head.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
-<!-- ── HERO BANNER ── -->
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-bg"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">Reliable Rides Across India</div>
-    <h1>Your Ride,<br>Your <em>Way</em></h1>
-    <p>Airport transfers, city day hires, and outstation trips — verified drivers, transparent pricing, and comfortable vehicles for every journey.</p>
-    <div class="hero-cta">
-      <a class="btn-primary" href="#packages" style="padding: 13px 28px; font-size: 15px;">View Taxi Packages</a>
-      <a class="btn-outline" href="index.html">Tour Packages</a>
+    <div class="hero-eyebrow">Reliable Truck &amp; Freight Services Across India</div>
+
+    <h1>Move Cargo.<br>Move <em>Business</em>.</h1>
+
+    <p>From household shifting to heavy industrial freight — our network of GPS-tracked trucks, verified drivers, and dedicated logistics managers ensures your cargo arrives safely, every time.</p>
+
+    <div class="service-pills">
+      <div class="service-pill"><span class="pill-icon">🏠</span> Household Shifting</div>
+      <div class="service-pill"><span class="pill-icon">🏭</span> Industrial Freight</div>
+      <div class="service-pill"><span class="pill-icon">🏗️</span> Construction Material</div>
+      <div class="service-pill"><span class="pill-icon">📦</span> E-Commerce Delivery</div>
+      <div class="service-pill"><span class="pill-icon">🌾</span> Agricultural Produce</div>
     </div>
   </div>
 
   <div class="hero-stats">
     <div class="stat">
-      <div class="stat-num">50+</div>
-      <div class="stat-label">Cities Covered</div>
+      <div class="stat-num">800+</div>
+      <div class="stat-label">Routes Served</div>
     </div>
     <div class="stat">
-      <div class="stat-num">15K+</div>
-      <div class="stat-label">Rides Completed</div>
+      <div class="stat-num">120K+</div>
+      <div class="stat-label">Loads Delivered</div>
     </div>
     <div class="stat">
       <div class="stat-num">4.8★</div>
-      <div class="stat-label">Driver Rating</div>
+      <div class="stat-label">Avg. Rating</div>
     </div>
   </div>
 
@@ -60,39 +70,51 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 
-<!-- ── SEARCH BAR ── -->
+<!-- ══════════════════════════════════════════════
+     SEARCH BAR
+══════════════════════════════════════════════ -->
 <div class="search-section">
   <div class="search-bar">
     <div class="search-field">
-      <label>Destination</label>
+      <label>Route / Destination</label>
       <select>
-        <option>All Destinations</option>
-        <option>Himachal Pradesh</option>
-        <option>Goa</option>
-        <option>Kerala</option>
-        <option>Rajasthan</option>
-        <option>Uttarakhand</option>
-        <option>Andaman</option>
+        <option>Select Destination</option>
+        <option>Delhi NCR</option>
+        <option>Mumbai</option>
+        <option>Chandigarh</option>
+        <option>Ludhiana</option>
+        <option>Amritsar</option>
+        <option>Jaipur</option>
+        <option>Ahmedabad</option>
+        <option>Bengaluru</option>
+        <option>Hyderabad</option>
+        <option>Chennai</option>
       </select>
     </div>
     <div class="search-field">
-      <label>Duration</label>
+      <label>Load Type</label>
       <select>
-        <option>Any Duration</option>
-        <option>1–3 Days</option>
-        <option>4–6 Days</option>
-        <option>7–10 Days</option>
-        <option>10+ Days</option>
+        <option>Any Load Type</option>
+        <option>📦 Household / Relocation</option>
+        <option>🏭 Industrial Goods</option>
+        <option>🏗️ Construction Material</option>
+        <option>🌾 Agricultural Produce</option>
+        <option>🧊 Temperature Controlled</option>
+        <option>⚠️ Hazardous / Special</option>
+        <option>📦 E-Commerce Parcels</option>
       </select>
     </div>
     <div class="search-field">
-      <label>Budget (per person)</label>
+      <label>Vehicle Type</label>
       <select>
-        <option>Any Budget</option>
-        <option>Under ₹10,000</option>
-        <option>₹10,000 – ₹25,000</option>
-        <option>₹25,000 – ₹50,000</option>
-        <option>₹50,000+</option>
+        <option>Any Vehicle</option>
+        <option>🛻 Mini Truck (Tata Ace)</option>
+        <option>🚛 Small Truck (407 / Pickup)</option>
+        <option>🚚 Medium Truck (14 ft)</option>
+        <option>🚚 Large Truck (20–22 ft)</option>
+        <option>🚛 Full Trailer (32–40 ft)</option>
+        <option>❄️ Refrigerated Truck</option>
+        <option>🏗️ Flatbed / Crane Truck</option>
       </select>
     </div>
     <button class="search-btn">
@@ -105,21 +127,22 @@ require_once __DIR__ . '/includes/header.php';
 </div>
 
 
+
 <!-- ── PACKAGES SECTION ── -->
 <section id="packages">
-  <div class="section-header">
-    <p class="section-eyebrow">Handpicked For You</p>
-    <h2 class="section-title">Our <em>Signature</em> Packages</h2>
-    <p class="section-sub">Every package is thoughtfully curated for comfort, adventure, and memories worth sharing.</p>
+  <div class="section-header" style="color:var(--white)">
+    <p class="section-eyebrow">Curated Truck Packages</p>
+    <h2 class="section-title">Choose Your <em>Ideal</em> Truck</h2>
+    <p class="section-sub">Fixed pricing, GPS-tracked vehicles, verified operators, and zero hidden charges on every shipment.</p>
   </div>
 
   <div class="filter-tabs">
     <button class="filter-tab active" onclick="filterCards('all', this)">All</button>
-    <button class="filter-tab" onclick="filterCards('mountains', this)">Mountains</button>
-    <button class="filter-tab" onclick="filterCards('beaches', this)">Beaches</button>
-    <button class="filter-tab" onclick="filterCards('heritage', this)">Heritage</button>
-    <button class="filter-tab" onclick="filterCards('wildlife', this)">Wildlife</button>
-    <button class="filter-tab" onclick="filterCards('honeymoon', this)">Honeymoon</button>
+    <button class="filter-tab" onclick="filterCards('shifting', this)">Household Shifting</button>
+    <button class="filter-tab" onclick="filterCards('freight', this)">Freight</button>
+    <button class="filter-tab" onclick="filterCards('construction', this)">Construction</button>
+    <button class="filter-tab" onclick="filterCards('refrigerated', this)">Refrigerated</button>
+    <button class="filter-tab" onclick="filterCards('flatbed', this)">Flatbed / ODC</button>
   </div>
 
   <div class="packages-grid" id="packagesGrid">
@@ -130,124 +153,126 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 
-<!-- ── WHY US ── -->
-<section class="why-us">
+<!-- ══════════════════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════════════════ -->
+<section class="how-it-works">
   <div class="section-header">
-    <p class="section-eyebrow">Why Choose Us</p>
-    <h2 class="section-title" style="color:var(--white)">Travel <em>Smarter</em> With Us</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.45)">We take care of every detail so you can focus on creating memories.</p>
+    <p class="section-eyebrow">Simple 4-Step Process</p>
+    <h2 class="section-title" style="color:var(--white)">How It <em>Works</em></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.45)">Your truck booked, dispatched, and tracked in minutes.</p>
   </div>
-
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="step-num-badge">1</span>
       </div>
-      <div class="feature-title">Fully Insured</div>
-      <div class="feature-desc">All packages come with comprehensive travel insurance for your complete peace of mind.</div>
+      <div class="step-title">Select &amp; Share Load</div>
+      <div class="step-desc">Choose truck type, enter pickup &amp; drop location, and share cargo weight and dimensions.</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <div class="step">
+      <div class="step-number">
+        <span class="step-glyph" aria-hidden="true">₹</span>
+        <span class="step-num-badge">2</span>
       </div>
-      <div class="feature-title">Handpicked Stays</div>
-      <div class="feature-desc">Every hotel, resort and camp is personally vetted by our travel experts.</div>
+      <div class="step-title">Get Instant Quote</div>
+      <div class="step-desc">Receive a transparent, fixed-price quote within minutes. No surprises, no hidden tolls.</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="step-num-badge">3</span>
       </div>
-      <div class="feature-title">24/7 Support</div>
-      <div class="feature-desc">Our travel concierge is available around the clock wherever you are in the world.</div>
+      <div class="step-title">Confirm &amp; Pay</div>
+      <div class="step-desc">Pay via UPI, NEFT, or credit. GST invoice sent instantly. Driver details shared 2 hrs prior.</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div class="step">
+      <div class="step-number">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span class="step-num-badge">4</span>
       </div>
-      <div class="feature-title">Flexible Booking</div>
-      <div class="feature-desc">Free cancellation up to 48 hours before departure. No questions asked.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      </div>
-      <div class="feature-title">Best Price Guarantee</div>
-      <div class="feature-desc">Find it cheaper elsewhere? We'll match the price and give you extra cashback.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="feature-title">Expert Local Guides</div>
-      <div class="feature-desc">Passionate local experts who know every hidden gem, story, and shortcut.</div>
+      <div class="step-title">Track &amp; Receive</div>
+      <div class="step-desc">Live GPS tracking link shared. Get delivery confirmation and e-POD (proof of delivery).</div>
     </div>
   </div>
 </section>
 
 
-<!-- ── TESTIMONIALS ── -->
-<section class="testimonials">
+
+<!-- ══════════════════════════════════════════════
+     FLEET OVERVIEW
+══════════════════════════════════════════════ -->
+<section class="fleet-showcase">
   <div class="section-header">
-    <p class="section-eyebrow">Traveller Stories</p>
-    <h2 class="section-title">What Our <em>Explorers</em> Say</h2>
+    <p class="section-eyebrow">Our Fleet</p>
+    <h2 class="section-title">Right Truck for <em>Every Load</em></h2>
+    <p class="section-sub">All trucks are fitness-certified, GPS-equipped, and fully insured. Operators are police-verified.</p>
   </div>
-
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      </div>
-      <p class="testimonial-text">"The Spiti Valley trip was nothing short of magical. Every detail was handled perfectly — we just had to show up and fall in love."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar-placeholder">AK</div>
-        <div>
-          <div class="author-name">Arjun Khanna</div>
-          <div class="author-trip">Spiti Valley Package</div>
-        </div>
+  <div class="fleet-grid">
+    <div class="fleet-card">
+      <span class="fleet-icon">🛻</span>
+      <div class="fleet-name">Mini Truck</div>
+      <div class="fleet-eg">Tata Ace, Mahindra Jeeto</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">500</span><span class="spec-label">kg Max</span></div>
+        <div class="fleet-spec"><span class="spec-val">7 ft</span><span class="spec-label">Body</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
       </div>
     </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-stars">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      </div>
-      <p class="testimonial-text">"Booked the Kerala houseboat package for our anniversary. Honestly the best decision we've ever made. Bookmyaddi truly goes the extra mile."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar-placeholder">PM</div>
-        <div>
-          <div class="author-name">Priya Mehta</div>
-          <div class="author-trip">Kerala Backwaters Package</div>
-        </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">🚛</span>
+      <div class="fleet-name">Pickup / 407</div>
+      <div class="fleet-eg">Tata 407, Eicher 10.90</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">1.5T</span><span class="spec-label">Max</span></div>
+        <div class="fleet-spec"><span class="spec-val">10 ft</span><span class="spec-label">Body</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
       </div>
     </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-stars">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <div class="fleet-card">
+      <span class="fleet-icon">🚚</span>
+      <div class="fleet-name">Medium Truck</div>
+      <div class="fleet-eg">Tata 1109, LPT 1518</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">5T</span><span class="spec-label">Max</span></div>
+        <div class="fleet-spec"><span class="spec-val">17 ft</span><span class="spec-label">Body</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
       </div>
-      <p class="testimonial-text">"Rajasthan circuit with the family was flawless. The heritage hotel was spectacular and our guide Ravi was an encyclopedia of history!"</p>
-      <div class="testimonial-author">
-        <div class="author-avatar-placeholder">RS</div>
-        <div>
-          <div class="author-name">Rohit Sharma</div>
-          <div class="author-trip">Royal Rajasthan Circuit</div>
-        </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">🚚</span>
+      <div class="fleet-name">Large Truck</div>
+      <div class="fleet-eg">Tata 2518, Ashok 2518</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">12T</span><span class="spec-label">Max</span></div>
+        <div class="fleet-spec"><span class="spec-val">22 ft</span><span class="spec-label">Body</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">🚛</span>
+      <div class="fleet-name">Full Trailer</div>
+      <div class="fleet-eg">Volvo FH, Tata Prima</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">25T</span><span class="spec-label">Max</span></div>
+        <div class="fleet-spec"><span class="spec-val">40 ft</span><span class="spec-label">Body</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <span class="fleet-icon">❄️</span>
+      <div class="fleet-name">Reefer / Cold</div>
+      <div class="fleet-eg">Eicher Reefer, Tata Reefer</div>
+      <div class="fleet-specs">
+        <div class="fleet-spec"><span class="spec-val">5T</span><span class="spec-label">Max</span></div>
+        <div class="fleet-spec"><span class="spec-val">-20°C</span><span class="spec-label">Temp</span></div>
+        <div class="fleet-spec"><span class="spec-val">GPS</span><span class="spec-label">Track</span></div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- ── NEWSLETTER ── -->
