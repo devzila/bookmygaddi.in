@@ -2,7 +2,7 @@
 $pageTitle = 'BookMyGaddi — Explore. Wander. Discover.';
 $activeNav = 'bus';
 $pageScript = 'assets/js/index.js';
-$pageStylesheet = 'assets/css/bus.css';
+$pageStylesheet = '/assets/css/bus.css';
 
 require_once __DIR__ . '/includes/config.php';
 
@@ -125,6 +125,60 @@ require_once __DIR__ . '/includes/header.php';
 
 
 <!-- ══════════════════ HOW IT WORKS ══════════════════ -->
+<style>
+  .how-it-works .step-number {
+    width: 72px !important;
+    height: 72px !important;
+    border-radius: 50%;
+    background: rgba(42, 157, 143, 0.12) !important;
+    border: 1px solid rgba(42, 157, 143, 0.35) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    position: relative;
+    z-index: 2;
+  }
+  .how-it-works .step-icon {
+    width: 28px !important;
+    height: 28px !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+  .how-it-works .step-icon.is-filled path {
+    fill: #5ec4b6 !important;
+    stroke: none !important;
+  }
+  .how-it-works .step-icon.is-outline circle,
+  .how-it-works .step-icon.is-outline line,
+  .how-it-works .step-icon.is-outline path,
+  .how-it-works .step-icon.is-outline rect {
+    stroke: #5ec4b6 !important;
+    fill: none !important;
+  }
+  .how-it-works .step-glyph {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    color: #5ec4b6 !important;
+  }
+  .how-it-works .step-num-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    z-index: 3;
+    width: 22px;
+    height: 22px;
+    background: #2a9d8f !important;
+    color: #fff !important;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
 <section class="how-it-works">
   <div class="section-header">
     <p class="section-eyebrow">Simple As 1-2-3-4</p>
@@ -134,15 +188,21 @@ require_once __DIR__ . '/includes/header.php';
   <div class="steps-grid">
     <div class="step">
       <div class="step-number">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <span class="step-num-badge">1</span>
+        <svg class="step-icon is-filled" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" role="img">
+          <path fill="#5EC4B6" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99 1.49-1.49-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 10.5 5 14 7.01 14 9.5 11.99 14 10.5 14z"/>
+        </svg>
+        <span class="step-num-badge" style="background:#2A9D8F;color:#FFFFFF;">1</span>
       </div>
       <div class="step-title">Select Package</div>
       <div class="step-desc">Choose your route, bus type, and number of passengers from our curated catalogue.</div>
     </div>
     <div class="step">
       <div class="step-number">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/><path d="M5.64 5.64A16 16 0 0 0 4 9"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        <svg class="step-icon is-outline" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="none" stroke="#5EC4B6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/>
+          <path fill="none" stroke="#5EC4B6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5.64 5.64A16 16 0 0 0 4 9"/>
+          <line fill="none" stroke="#5EC4B6" stroke-width="1.75" stroke-linecap="round" x1="1" y1="1" x2="23" y2="23"/>
+        </svg>
         <span class="step-num-badge">2</span>
       </div>
       <div class="step-title">Share Requirements</div>
@@ -150,7 +210,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
     <div class="step">
       <div class="step-number">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <span class="step-glyph" aria-hidden="true">₹</span>
         <span class="step-num-badge">3</span>
       </div>
       <div class="step-title">Confirm &amp; Pay</div>
@@ -158,7 +218,12 @@ require_once __DIR__ . '/includes/header.php';
     </div>
     <div class="step">
       <div class="step-number">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="14" rx="2"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><circle cx="7" cy="20" r="2"/><circle cx="17" cy="20" r="2"/></svg>
+        <svg class="step-icon is-outline" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="1" y="6" width="22" height="14" rx="2" fill="none" stroke="#5EC4B6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path fill="none" stroke="#5EC4B6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          <circle cx="7" cy="20" r="2" fill="none" stroke="#5EC4B6" stroke-width="1.75"/>
+          <circle cx="17" cy="20" r="2" fill="none" stroke="#5EC4B6" stroke-width="1.75"/>
+        </svg>
         <span class="step-num-badge">4</span>
       </div>
       <div class="step-title">Board &amp; Relax</div>

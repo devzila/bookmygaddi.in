@@ -1,4 +1,10 @@
-  /* ── FLEET OVERVIEW ── */
+:root {
+  --teal: #2A9D8F;
+  --teal-light: #5EC4B6;
+  --teal-dark: #1F7A6F;
+}
+
+/* ── FLEET OVERVIEW ── */
   .fleet-showcase { background: var(--white); padding: 90px 5vw; }
 
   .fleet-grid {
@@ -45,7 +51,12 @@
   .spec-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; }
 
 /* ── HOW IT WORKS ── */
-.how-it-works { background: var(--deep); padding: 90px 5vw; }
+.how-it-works {
+  background: var(--deep);
+  padding: 90px 5vw;
+  position: relative;
+  z-index: 5;
+}
 .how-it-works .section-eyebrow { color: var(--teal-light); }
 .how-it-works .section-title  { color: var(--white); }
 .how-it-works .section-sub    { color: rgba(255,255,255,0.45); }
@@ -64,6 +75,7 @@
     height: 1px;
     background: repeating-linear-gradient(90deg, rgba(42,157,143,0.3) 0px, rgba(42,157,143,0.3) 8px, transparent 8px, transparent 16px);
     z-index: 0;
+    pointer-events: none;
 }
 
 .step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
@@ -74,18 +86,52 @@
     border: 1px solid rgba(42,157,143,0.25);
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto 24px; position: relative;
+    z-index: 2;
+    color: #5EC4B6;
     transition: background var(--transition), border-color var(--transition);
 }
 
 .step:hover .step-number { background: rgba(42,157,143,0.18); border-color: rgba(42,157,143,0.5); }
 
-.step-number svg { width: 28px; height: 28px; stroke: var(--teal-light); }
+.how-it-works .step-number svg.step-icon {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px;
+    min-height: 28px;
+    flex-shrink: 0;
+    display: block !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.how-it-works .step-icon.is-filled path {
+    fill: #5EC4B6 !important;
+    stroke: none !important;
+}
+
+.how-it-works .step-icon.is-outline circle,
+.how-it-works .step-icon.is-outline line,
+.how-it-works .step-icon.is-outline path,
+.how-it-works .step-icon.is-outline rect {
+    stroke: #5EC4B6 !important;
+    fill: none !important;
+}
+
+.step-glyph {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    color: #5EC4B6;
+    font-family: system-ui, 'Segoe UI', 'Noto Sans', sans-serif;
+}
 
 .step-num-badge {
     position: absolute; top: -4px; right: -4px;
+    z-index: 3;
     width: 22px; height: 22px;
-    background: var(--teal); border-radius: 50%;
-    font-size: 11px; font-weight: 500; color: var(--white);
+    background: #2A9D8F; border-radius: 50%;
+    font-size: 11px; font-weight: 600; color: #fff;
     display: flex; align-items: center; justify-content: center;
 }
 
