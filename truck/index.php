@@ -41,7 +41,7 @@ if ($package) {
     $packageContentRaw = trim((string) ($package['content'] ?? ''));
     $packageContentHtml = '';
     if ($packageContentRaw !== '') {
-        $allowedTags = '<p><br><br/><strong><b><em><i><ul><ol><li><h2><h3><h4>';
+      $allowedTags = '<table><tr><td><th><tbody><thead><tfoot><caption><colgroup><col><tr><td><th><tbody><thead><tfoot><caption><colgroup><col><p><br><br/><strong><b><em><i><ul><ol><li><h2><h3><h4>';
         $packageContentHtml = str_contains($packageContentRaw, '<')
             ? strip_tags($packageContentRaw, $allowedTags)
             : nl2br(htmlspecialchars($packageContentRaw, ENT_QUOTES, 'UTF-8'));
