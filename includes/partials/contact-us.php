@@ -6,13 +6,17 @@
  *   $contactFormPrefix  — unique ID prefix (default: contact)
  *   $contactTitle       — heading (default: Contact Us)
  *   $contactSubtitle    — intro text
- *   $contactApiUrl      — POST endpoint (default: /api/taxi/contact.php)
- *   $contactSubmitLabel — button label (default: Send Enquiry)
+ *   $contactApiUrl       — POST endpoint (default: /api/contact.php)
+ *   $contactServiceType  — taxi | bus | tour | truck | general
+ *   $contactPackageSlug  — optional package slug from detail page
+ *   $contactSubmitLabel  — button label (default: Send Enquiry)
  */
 $contactFormPrefix = $contactFormPrefix ?? 'contact';
 $contactTitle = $contactTitle ?? 'Contact Us';
 $contactSubtitle = $contactSubtitle ?? 'Share your details and we will get back to you shortly.';
-$contactApiUrl = $contactApiUrl ?? '/api/taxi/contact.php';
+$contactApiUrl = $contactApiUrl ?? '/api/contact.php';
+$contactServiceType = $contactServiceType ?? 'general';
+$contactPackageSlug = $contactPackageSlug ?? '';
 $contactSubmitLabel = $contactSubmitLabel ?? 'Send Enquiry';
 
 $formId = $contactFormPrefix . 'ContactForm';
@@ -25,7 +29,9 @@ $idEmail = $contactFormPrefix . '-email';
 $idPhone = $contactFormPrefix . '-phone';
 $idMessage = $contactFormPrefix . '-message';
 ?>
-<div class="taxi-contact-card contact-us" data-api-url="<?= htmlspecialchars($contactApiUrl, ENT_QUOTES, 'UTF-8') ?>">
+<div class="taxi-contact-card contact-us"
+  data-api-url="<?= htmlspecialchars($contactApiUrl, ENT_QUOTES, 'UTF-8') ?>"
+  data-service-type="<?= htmlspecialchars($contactServiceType, ENT_QUOTES, 'UTF-8') ?>">
   <div id="<?= htmlspecialchars($formWrapId, ENT_QUOTES, 'UTF-8') ?>" class="contact-us-form-wrap">
     <h2><?= htmlspecialchars($contactTitle, ENT_QUOTES, 'UTF-8') ?></h2>
     <p><?= htmlspecialchars($contactSubtitle, ENT_QUOTES, 'UTF-8') ?></p>
@@ -33,6 +39,9 @@ $idMessage = $contactFormPrefix . '-message';
     <div id="<?= htmlspecialchars($formAlertId, ENT_QUOTES, 'UTF-8') ?>" class="taxi-form-alert" role="alert"></div>
 
     <form id="<?= htmlspecialchars($formId, ENT_QUOTES, 'UTF-8') ?>" class="taxi-contact-form contact-us-form" novalidate>
+      <?php if ($contactPackageSlug !== ''): ?>
+      <input type="hidden" name="package_slug" value="<?= htmlspecialchars($contactPackageSlug, ENT_QUOTES, 'UTF-8') ?>">
+      <?php endif; ?>
       <div class="taxi-form-field">
         <label for="<?= htmlspecialchars($idName, ENT_QUOTES, 'UTF-8') ?>">Full Name</label>
         <input type="text" id="<?= htmlspecialchars($idName, ENT_QUOTES, 'UTF-8') ?>" name="name" required autocomplete="name" placeholder="Your name">

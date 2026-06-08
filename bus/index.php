@@ -7,7 +7,8 @@ $pageStylesheet = '/assets/css/taxi-contact.css';
 $contactFormPrefix = 'bus';
 $contactTitle = 'Contact Us';
 $contactSubtitle = 'Share your journey details and we will get back to you shortly.';
-$contactApiUrl = '/api/taxi/contact.php';
+$contactApiUrl = '/api/contact.php';
+$contactServiceType = 'bus';
 
 require_once __DIR__ . '/../includes/config.php';
 
@@ -138,7 +139,10 @@ require_once __DIR__ . '/../includes/header.php';
       <?php endif; ?>
     </div>
 
-    <?php require __DIR__ . '/../includes/partials/contact-us.php'; ?>
+    <?php
+    $contactPackageSlug = $package['slug'] ?? '';
+    require __DIR__ . '/../includes/partials/contact-us.php';
+    ?>
   </div>
 </main>
 

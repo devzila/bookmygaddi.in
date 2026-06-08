@@ -3,7 +3,8 @@
     const form = root.querySelector('.contact-us-form');
     if (!form) return;
 
-    const apiUrl = root.dataset.apiUrl || '/api/taxi/contact.php';
+    const apiUrl = root.dataset.apiUrl || '/api/contact.php';
+    const serviceType = root.dataset.serviceType || 'general';
     const formWrap = root.querySelector('.contact-us-form-wrap');
     const successPanel = root.querySelector('.contact-us-success');
     const successMessage = root.querySelector('.contact-us-success-message');
@@ -45,7 +46,14 @@
         email: form.email.value.trim(),
         phone: form.phone.value.trim(),
         message: form.message.value.trim(),
+        service_type: serviceType,
+        page_url: window.location.href,
       };
+
+      const packageSlugField = form.querySelector('[name="package_slug"]');
+      if (packageSlugField && packageSlugField.value.trim()) {
+        payload.package_slug = packageSlugField.value.trim();
+      }
 
       try {
         const res = await fetch(apiUrl, {

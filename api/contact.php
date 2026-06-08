@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 header('Content-Type: application/json; charset=utf-8');
 
-require_once dirname(__DIR__, 2) . '/includes/config.php';
-require_once dirname(__DIR__, 2) . '/includes/contact-handler.php';
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once dirname(__DIR__) . '/includes/contact-handler.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -18,11 +18,7 @@ if (!is_array($input)) {
     $input = $_POST;
 }
 
-if (!isset($input['service_type']) || trim((string) $input['service_type']) === '') {
-    $input['service_type'] = 'taxi';
-}
-
-$result = handleContactInquiry($input, 'taxi');
+$result = handleContactInquiry($input, 'general');
 
 if (!$result['success']) {
     $status = isset($result['errors']) ? 422 : 500;
