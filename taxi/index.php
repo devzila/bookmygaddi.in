@@ -123,7 +123,7 @@ require_once __DIR__ . '/../includes/header.php';
             <span class="taxi-stat-value"><?= htmlspecialchars($packageDistance, ENT_QUOTES, 'UTF-8') ?></span>
           </div>
           <?php endif; ?>
-          <?php if ($packagePrice !== ''): ?>
+          <?php if (packagePrice !== ''): ?>
           <div class="taxi-stat taxi-stat-price">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             <span class="taxi-stat-label">Price</span>

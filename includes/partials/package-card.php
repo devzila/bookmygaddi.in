@@ -22,7 +22,7 @@ $duration = trim((string) ($item['duration'] ?? ''));
 $vehicleType = trim((string) ($item['vehicle_type'] ?? ''));
 $distanceKm = $item['distance_in_km'] ?? '';
 $price = is_numeric($item['price'] ?? null)
-    ? '₹' . number_format((float) $item['price'], 0, '.', ',')
+   ? '₹' . number_format((float) $item['price'], 0, '.', ',')
     : (string) ($item['price'] ?? '');
 $rating = trim((string) ($item['rating'] ?? ''));
 
@@ -69,7 +69,7 @@ $distanceLabel = $distanceKm !== '' && $distanceKm !== null
             <?= htmlspecialchars($distanceLabel, ENT_QUOTES, 'UTF-8') ?>
           </div>
           <?php endif; ?>
-        </div>
+        </div>s
         <div class="card-divider"></div>
         <div class="card-footer">
           <div>
