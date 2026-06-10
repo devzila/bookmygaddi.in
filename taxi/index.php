@@ -1,14 +1,5 @@
 <?php
-$pageTitle = 'BookMyGaddi — Taxi Enquiry';
-$activeNav = 'taxi';
-$pageScript = '/assets/js/contact-form.js';
-$pageStylesheet = '/assets/css/taxi-contact.css';
 
-$contactFormPrefix = 'taxi';
-$contactTitle = 'Contact Us';
-$contactSubtitle = 'Share your trip details and we will get back to you shortly.';
-$contactApiUrl = '/api/contact.php';
-$contactServiceType = 'taxi';
 
 require_once __DIR__ . '/../includes/config.php';
 
@@ -59,6 +50,22 @@ if ($package) {
         }
     }
 }
+
+$pageTitle = $package['title'];
+$pageDescription = $package['meta_description'];
+$pageKeywords = $package['page_keywords'];
+$pageAuthor = "BookMyGaddi";
+$pageRobots = 'index, follow';
+
+$activeNav = 'taxi';
+$pageScript = '/assets/js/contact-form.js';
+$pageStylesheet = '/assets/css/taxi-contact.css';
+
+$contactFormPrefix = 'taxi';
+$contactTitle = 'Contact Us';
+$contactSubtitle = 'Share your trip details and we will get back to you shortly.';
+$contactApiUrl = '/api/contact.php';
+$contactServiceType = 'taxi';
 
 require_once __DIR__ . '/../includes/head.php';
 require_once __DIR__ . '/../includes/header.php';
