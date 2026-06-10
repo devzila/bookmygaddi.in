@@ -1,5 +1,9 @@
 <?php
 $pageTitle = 'BookMyGaddi — Explore. Wander. Discover.';
+$pageDescription = 'BookMyGaddi is a platform for booking travel packages and tours. We offer a wide range of packages for different destinations and activities.';
+$pageKeywords = 'travel, packages, tours, destinations, activities, booking, travel packages, travel tours, travel destinations, travel activities, travel booking, travel packages, travel tours, travel destinations, travel activities, travel booking';
+$pageAuthor = 'BookMyGaddi';
+$pageRobots = 'index, follow';
 $activeNav = 'tour';
 $pageScript = 'assets/js/index.js';
 
