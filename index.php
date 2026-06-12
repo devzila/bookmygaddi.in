@@ -119,11 +119,11 @@ require_once __DIR__ . '/includes/header.php';
 
   <div class="filter-tabs">
     <button class="filter-tab active" onclick="filterCards('all', this)">All</button>
-    <button class="filter-tab" onclick="filterCards('hill-station', this)">Hill station</button>
+    <button class="filter-tab" onclick="filterCards('hill-station', this)">Hill Station</button>
     <button class="filter-tab" onclick="filterCards('beaches', this)">Beaches</button>
     <button class="filter-tab" onclick="filterCards('intercity', this)">Intercity</button>
     <button class="filter-tab" onclick="filterCards('wildlife', this)">Wildlife</button>
-    <button class="filter-tab" onclick="filterCards('pilgrimage', this)">Pilgrimage</button>
+    <button class="filter-tab" onclick="filterCards('pilgrimage', this)">Pilgrimag</button>
   </div>
 
   <div class="packages-grid" id="packagesGrid">
