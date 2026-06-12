@@ -9,7 +9,9 @@ $package = null;
 if ($slug !== '' && preg_match('/^[a-z0-9-]+$/i', $slug)) {
     try {
         $stmt = db()->prepare(
-            'SELECT id, badge, image_url, tags, title, slug, content, duration, vehicle_type, distance_in_km, price, rating, data_categories
+            'SELECT id, badge, image_url, tags, title, slug, content, 
+             duration, vehicle_type, distance_in_km, price, rating, data_categories,
+             meta_description, page_keywords
              FROM packages
              WHERE active = 1 AND type = :type AND slug = :slug
              LIMIT 1'
