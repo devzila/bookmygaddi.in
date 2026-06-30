@@ -102,7 +102,7 @@ require_once __DIR__ . '/../includes/header.php';
           <?= htmlspecialchars($package['rating'], ENT_QUOTES, 'UTF-8') ?>
         </p>
         <?php endif; ?>
-        <h2><?= htmlspecialchars($package['title'], ENT_QUOTES, 'UTF-8') ?></h1>
+        <h2><?= htmlspecialchars($package['title'], ENT_QUOTES, 'UTF-8') ?></h2>
         <?php if (!empty($package['tags'])): ?>
         <p class="taxi-package-tags"><?= htmlspecialchars($package['tags'], ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
@@ -133,7 +133,7 @@ require_once __DIR__ . '/../includes/header.php';
             <span class="taxi-stat-value"><?= htmlspecialchars($packageDistance, ENT_QUOTES, 'UTF-8') ?></span>
           </div>
           <?php endif; ?>
-          <?php if (packagePrice !== ''): ?>
+          <?php if ($packagePrice !== ''): ?>
           <div class="taxi-stat taxi-stat-price">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12"/><path d="M6 8h12"/><path d="M6 13l8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
             <span class="taxi-stat-label">Price</span>
