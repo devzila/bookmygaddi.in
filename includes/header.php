@@ -31,8 +31,8 @@ $navActiveStyle = ' style="color:var(--gold)"';
     <a class="btn-primary btn-call btn-call-in-menu" href="tel:9915235434">Call Us: 9915235434</a>
   </nav>
 
-  <a class="btn-primary btn-call btn-call-header" href="tel:9915235434" aria-label="Call us at 9915235434">
-    <strong>Call Us: 9915235434</strong>
+  <a class="btn-primary btn-call btn-call-header" href="tel:9711113179" aria-label="Call us at 9711113179">
+    <strong>Call Us: 9711113179</strong>
   </a>
 
   <div class="nav-overlay" aria-hidden="true"></div>
